@@ -84,12 +84,12 @@ const Calculator = () => {
       operation === "+"
         ? "+"
         : operation === "-"
-        ? "−"
-        : operation === "*"
-        ? "×"
-        : operation === "/"
-        ? "÷"
-        : operation;
+          ? "−"
+          : operation === "*"
+            ? "×"
+            : operation === "/"
+              ? "÷"
+              : operation;
 
     setHistory(`${previousValue} ${opSymbol} ${currentValue}`);
     setDisplay(String(result));
@@ -123,12 +123,12 @@ const Calculator = () => {
                       operation === "+"
                         ? "+"
                         : operation === "-"
-                        ? "−"
-                        : operation === "*"
-                        ? "×"
-                        : operation === "/"
-                        ? "÷"
-                        : operation
+                          ? "−"
+                          : operation === "*"
+                            ? "×"
+                            : operation === "/"
+                              ? "÷"
+                              : operation
                     }`) ||
                   " "}
               </div>
@@ -208,7 +208,7 @@ const Calculator = () => {
 
           <button
             onClick={() => handleNumberClick("0")}
-            className="col-span-2 bg-gray-600 hover:bg-gray-500 text-white py-4 rounded-lg text-xl font-bold transition-colors font-mono"
+            className="col-span-2 bg-gray-600 hover:bg-gray-500 font-mono text-white py-4 rounded-lg text-xl font-bold transition-colors"
           >
             0
           </button>
@@ -216,7 +216,7 @@ const Calculator = () => {
             onClick={handleDecimalClick}
             className="bg-gray-600 hover:bg-gray-500 text-white py-4 rounded-lg text-xl font-bold transition-colors font-mono"
           >
-            .
+            <div className="clear"></div>
           </button>
         </div>
       </div>
